@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lift - Simulation</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <h1 class="liftSim">LIFT SIMULATION</h1>
+    <div class="generator">
+      <div class="liftin">
+        <label for="liftsInput">Enter no. of Lifts</label>
+        <input type="number" id="liftsInput" min="1" />
+      </div>
+      <div class="floorsin">
+        <label for="floorsInput">Enter no. of Floors</label>
+        <input type="number" id="floorsInput" min="1" />
+      </div>
+      <button onclick="generate()">Generate</button>
+    </div>
+    <div class="simulation" id="simulation"></div>
+  </body>
+</html>
