@@ -3,7 +3,6 @@ function generate() {
   const liftsValue = parseInt(document.getElementById("liftsInput").value);
   const floorsValue = parseInt(document.getElementById("floorsInput").value);
 
-  // Input validation
   if (!liftsValue || !floorsValue) {
     alert("Please enter the number of lifts and floors required");
     return;
