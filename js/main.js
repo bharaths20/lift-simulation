@@ -70,7 +70,12 @@ function generate() {
   document.getElementById("up" + floorsValue).disabled = true;
   document.getElementById("down1").disabled = true;
 
+  const totalWidth = liftsValue * (liftWidth + spacing) + spacing;
   const totalHeight = floorsValue * (floorHeight + 2);
+
+  simulation.style.width = `${totalWidth}px`;
+  simulation.style.height = `${totalHeight}px`;
+  simulation.style.minWidth = "100%";
 
   for (let i = 1; i <= liftsValue; i++) {
     const lift = document.createElement("div");
@@ -94,10 +99,8 @@ function generate() {
     lift.style.height = `${liftHeight}px`;
     lift.style.position = "absolute";
     lift.style.bottom = "17px";
-    lift.style.left = `${(i - 1) * (liftWidth + spacing) + 2 * spacing}px`;
+    lift.style.left = `${(i - 1) * (liftWidth + spacing) + spacing + 50}px`;
   }
-
-  simulation.style.height = `${totalHeight}px`;
 
   function addToQueue(targetFloor, direction, button) {
     queue.push({ targetFloor, direction, button });

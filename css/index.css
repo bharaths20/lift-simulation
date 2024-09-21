@@ -14,7 +14,7 @@ body {
 
 .generator {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
   gap: 20px;
@@ -49,8 +49,7 @@ button:hover {
 .simulation {
   position: relative;
   width: 100%;
-  height: 80vh;
-  overflow-y: auto;
+  overflow-x: auto;
   border: 1px solid #ccc;
 }
 
@@ -134,4 +133,25 @@ button:hover {
 
 .down::after {
   content: "▼";
+}
+
+@media (max-width: 768px) {
+  .generator {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .liftin,
+  .floorsin {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+  }
+
+  .simulation {
+    overflow-x: scroll;
+  }
 }
